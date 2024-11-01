@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  background-color: #15171E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.advice-container {
+  background-color: #1F2632;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.advice-id {
+  color: #52FFA8;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.advice-text {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  padding: 0 20px;
+}
+
+.line {
+  height: 1px;
+  flex-grow: 1;
+  background-color: #4F5D74;
+}
+
+.pause-marks {
+  display: flex;
+  gap: 5px;
+  padding: 0 5px;
+}
+
+.vertical-line {
+  width: 5px;
+  height: 15px;
+  background-color: #4F5D74;
+  border-radius: 3px;
+}
+
+.dice-button {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #52FFA8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.dice-button:hover {
+  box-shadow: 0 0 25px rgba(82, 255, 168, 0.8);
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.dice-button svg {
+  color: #52FFA8;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(21, 23, 30, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1F2632;
+  border-top: 3px solid #52FFA8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .advice-container {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+  
+  .advice-text {
+    font-size: 1.25rem;
+  }
+}
